@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   creator: "Kawachi Infratech",
   publisher: "Kawachi Infratech",
   robots: "index, follow",
+  metadataBase: new URL("https://adityabhardwaj1234.github.io/KawachiWeb/"),
   openGraph: {
     type: "website",
     locale: "en_IN",
@@ -43,14 +44,20 @@ export const metadata: Metadata = {
       "Leading construction & infrastructure development company delivering innovative, scalable, and sustainable engineering solutions.",
     images: ["/Kawachi_logo_design4.jpg"],
   },
-  viewport: "width=device-width, initial-scale=1",
-  themeColor: "#00ffff",
   manifest: "/manifest.json",
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
 };
+
+export function generateViewport() {
+  return {
+    width: "device-width",
+    initialScale: 1,
+    themeColor: "#00ffff",
+  };
+}
 
 export default function RootLayout({
   children,
