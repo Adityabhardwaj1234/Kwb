@@ -254,6 +254,16 @@ textarea:focus-visible {
   transform: translateY(-10px) scale(1.02);
 }
 
+/* Scrollbar utilities */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 /* Mobile optimizations */
 @media (max-width: 768px) {
   .text-5xl {
@@ -266,6 +276,24 @@ textarea:focus-visible {
 
   .text-7xl {
     font-size: 3.5rem;
+  }
+
+  /* Improve touch targets for mobile */
+  button,
+  a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Better spacing on mobile */
+  .px-6 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .py-24 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
   /* Reduce animations on mobile for performance */
