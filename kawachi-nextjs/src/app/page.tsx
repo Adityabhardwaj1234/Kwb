@@ -436,6 +436,107 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Portfolio Section */}
+        <section
+          id="portfolio"
+          className="py-16 md:py-24 bg-gradient-to-r from-kawachi-darker to-kawachi-dark relative"
+        >
+          <div className="max-w-7xl mx-auto px-4 md:px-6">
+            <ScrollReveal>
+              <div className="text-center mb-12 md:mb-16">
+                <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-kawachi-primary to-kawachi-accent bg-clip-text text-transparent mb-4 md:mb-6">
+                  Our Portfolio
+                </h2>
+                <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
+                  Showcasing landmark infrastructure projects that demonstrate
+                  our expertise and commitment to excellence
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <StaggeredReveal className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+              {portfolioProjects.map((project, index) => (
+                <StaggerItem key={index}>
+                  <motion.div
+                    className="bg-kawachi-dark/60 backdrop-blur-intense border border-kawachi-primary/20 rounded-2xl overflow-hidden h-full transition-all duration-300 hover:border-kawachi-primary/40 hover:shadow-epic group"
+                    whileHover={{ y: -8, scale: 1.02 }}
+                  >
+                    <div className="relative h-48 md:h-56 overflow-hidden">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-kawachi-dark via-transparent to-transparent" />
+                      <div className="absolute top-4 left-4 right-4 flex justify-between">
+                        <span
+                          className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                            project.status === "Completed"
+                              ? "bg-green-500/20 text-green-400 border border-green-500/30"
+                              : "bg-blue-500/20 text-blue-400 border border-blue-500/30"
+                          }`}
+                        >
+                          {project.status}
+                        </span>
+                        <span className="px-3 py-1 bg-kawachi-primary/20 text-kawachi-primary text-xs font-semibold rounded-full border border-kawachi-primary/30">
+                          {project.category}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="p-6">
+                      <h3 className="text-lg md:text-xl font-semibold text-white mb-2 group-hover:text-kawachi-primary transition-colors">
+                        {project.title}
+                      </h3>
+                      <p className="text-kawachi-secondary text-sm mb-3">
+                        📍 {project.location}
+                      </p>
+                      <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                        {project.description}
+                      </p>
+
+                      <div className="grid grid-cols-2 gap-4 mb-4">
+                        <div>
+                          <p className="text-xs text-gray-500 uppercase tracking-wide">
+                            Value
+                          </p>
+                          <p className="text-kawachi-primary font-semibold text-sm">
+                            {project.value}
+                          </p>
+                        </div>
+                        <div>
+                          <p className="text-xs text-gray-500 uppercase tracking-wide">
+                            Duration
+                          </p>
+                          <p className="text-kawachi-secondary font-semibold text-sm">
+                            {project.duration}
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="space-y-1">
+                        <p className="text-xs text-gray-500 uppercase tracking-wide mb-2">
+                          Technologies
+                        </p>
+                        <div className="flex flex-wrap gap-1">
+                          {project.technologies.map((tech, techIndex) => (
+                            <span
+                              key={techIndex}
+                              className="px-2 py-1 bg-kawachi-accent/10 text-kawachi-accent text-xs rounded-md"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                </StaggerItem>
+              ))}
+            </StaggeredReveal>
+          </div>
+        </section>
+
         {/* About Section */}
         <section
           id="about"
