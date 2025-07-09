@@ -259,6 +259,93 @@ export default function HomePage() {
     },
   ];
 
+  const companyProfile = {
+    incorporation: "2021",
+    registration: "U45201DL2021PTC384602",
+    headquarters: "New Delhi, India",
+    founder: "Aditya Bhardwaj",
+    specialization: "Infrastructure Development & Construction",
+    vision:
+      "To be India's leading infrastructure development company, creating sustainable and innovative engineering solutions that transform communities and drive economic growth.",
+    mission:
+      "Delivering world-class infrastructure projects through cutting-edge technology, sustainable practices, and unwavering commitment to quality and safety.",
+    values: [
+      "Innovation",
+      "Quality",
+      "Sustainability",
+      "Integrity",
+      "Excellence",
+    ],
+  };
+
+  const keyPersonnel = [
+    {
+      name: "Aditya Bhardwaj",
+      role: "Founder & Managing Director",
+      qualification: "B.Tech Civil Engineering",
+      experience: "5+ Years in Infrastructure Development",
+      image:
+        "https://images.pexels.com/photos/32866728/pexels-photo-32866728.jpeg",
+    },
+  ];
+
+  const certifications = [
+    "ISO 9001:2015 Quality Management System",
+    "ISO 14001:2015 Environmental Management",
+    "ISO 45001:2018 Occupational Health & Safety",
+    "NSIC Registration",
+    "MSME Registration",
+    "PWD Registration",
+  ];
+
+  const sponsors = [
+    {
+      name: "Ministry of Road Transport & Highways",
+      logo: "https://images.pexels.com/photos/32889240/pexels-photo-32889240.jpeg",
+      category: "Government Partner",
+      description: "Strategic partnership for highway infrastructure projects",
+    },
+    {
+      name: "Indian Railways",
+      logo: "https://images.pexels.com/photos/681347/pexels-photo-681347.jpeg",
+      category: "Infrastructure Partner",
+      description: "Collaboration on railway infrastructure development",
+    },
+    {
+      name: "Delhi Development Authority",
+      logo: "https://images.pexels.com/photos/11505610/pexels-photo-11505610.jpeg",
+      category: "Urban Development",
+      description: "Urban planning and development projects",
+    },
+    {
+      name: "Central Public Works Department",
+      logo: "https://images.pexels.com/photos/1259924/pexels-photo-1259924.jpeg",
+      category: "Public Works",
+      description: "Government building and infrastructure projects",
+    },
+    {
+      name: "National Highways Authority",
+      logo: "https://images.pexels.com/photos/32889240/pexels-photo-32889240.jpeg",
+      category: "Highway Development",
+      description: "National highway construction and maintenance",
+    },
+    {
+      name: "Smart Cities Mission",
+      logo: "https://images.pexels.com/photos/8488029/pexels-photo-8488029.jpeg",
+      category: "Smart Infrastructure",
+      description: "Smart city development and digital infrastructure",
+    },
+  ];
+
+  const companyNumbers = {
+    projectsCompleted: "100+",
+    ongoingProjects: "25+",
+    statesPresent: "8+",
+    teamSize: "150+",
+    annualTurnover: "₹500 Cr+",
+    clientSatisfaction: "99%",
+  };
+
   const testimonials = [
     {
       name: "Rajesh Kumar",
@@ -806,17 +893,17 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Enhanced About Section */}
+        {/* Company Profile Section */}
         <section id="about" className="py-16 md:py-24 relative">
-          <div className="max-w-4xl mx-auto px-4 md:px-6 text-center">
+          <div className="max-w-7xl mx-auto px-4 md:px-6">
             <ScrollReveal>
-              <div className="mb-8 md:mb-12">
-                <motion.div
-                  className="w-20 h-20 md:w-24 md:h-24 mx-auto rounded-2xl mb-6 md:mb-8 border-2 border-kawachi-primary/30 shadow-glow bg-gradient-to-br from-kawachi-primary/20 to-kawachi-accent/20 flex items-center justify-center text-3xl md:text-4xl"
+              <div className="text-center mb-12 md:mb-16">
+                <motion.img
+                  src="/Kawachi_logo_design4.jpg"
+                  alt="Kawachi Infratech Logo"
+                  className="w-20 h-20 md:w-24 md:h-24 mx-auto rounded-2xl mb-6 md:mb-8 border-2 border-kawachi-primary/30 shadow-glow object-cover"
                   whileHover={{ scale: 1.1, rotate: 5 }}
-                >
-                  ⚡
-                </motion.div>
+                />
 
                 <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-kawachi-primary to-kawachi-accent bg-clip-text text-transparent mb-4 md:mb-6">
                   Kawachi Infratech Private Limited
@@ -825,35 +912,279 @@ export default function HomePage() {
                 <p className="text-xl md:text-2xl text-kawachi-secondary font-medium mb-6 md:mb-8">
                   Engineering Infrastructure for the Future
                 </p>
-
-                <p className="text-sm md:text-lg text-gray-400 leading-relaxed mb-8 md:mb-12 max-w-3xl mx-auto">
-                  We are a forward-thinking infrastructure company delivering
-                  innovative, scalable, and sustainable engineering solutions
-                  across India&apos;s public and private sectors. Since our
-                  incorporation in 2021, we have been committed to transforming
-                  the infrastructure landscape with cutting-edge technology, BIM
-                  integration, and engineering excellence.
-                </p>
               </div>
             </ScrollReveal>
 
+            {/* Company Overview Grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 mb-16">
+              <ScrollReveal direction="left">
+                <div className="bg-kawachi-dark/50 backdrop-blur-intense border border-kawachi-primary/20 rounded-2xl p-6 md:p-8">
+                  <h3 className="text-2xl md:text-3xl font-semibold text-white mb-6">
+                    Company Overview
+                  </h3>
+                  <div className="space-y-4">
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <p className="text-sm text-gray-400 uppercase tracking-wide">
+                          Incorporated
+                        </p>
+                        <p className="text-kawachi-primary font-semibold">
+                          {companyProfile.incorporation}
+                        </p>
+                      </div>
+                      <div>
+                        <p className="text-sm text-gray-400 uppercase tracking-wide">
+                          Registration
+                        </p>
+                        <p className="text-kawachi-secondary font-semibold text-sm">
+                          {companyProfile.registration}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div>
+                      <p className="text-sm text-gray-400 uppercase tracking-wide">
+                        Headquarters
+                      </p>
+                      <p className="text-white font-semibold">
+                        {companyProfile.headquarters}
+                      </p>
+                    </div>
+
+                    <div>
+                      <p className="text-sm text-gray-400 uppercase tracking-wide">
+                        Founder & MD
+                      </p>
+                      <p className="text-white font-semibold">
+                        {companyProfile.founder}
+                      </p>
+                    </div>
+
+                    <div>
+                      <p className="text-sm text-gray-400 uppercase tracking-wide">
+                        Specialization
+                      </p>
+                      <p className="text-white font-semibold">
+                        {companyProfile.specialization}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal direction="right">
+                <div className="space-y-6">
+                  <div className="bg-kawachi-dark/50 backdrop-blur-intense border border-kawachi-primary/20 rounded-2xl p-6 md:p-8">
+                    <h3 className="text-xl md:text-2xl font-semibold text-white mb-4">
+                      Our Vision
+                    </h3>
+                    <p className="text-gray-400 leading-relaxed">
+                      {companyProfile.vision}
+                    </p>
+                  </div>
+
+                  <div className="bg-kawachi-dark/50 backdrop-blur-intense border border-kawachi-primary/20 rounded-2xl p-6 md:p-8">
+                    <h3 className="text-xl md:text-2xl font-semibold text-white mb-4">
+                      Our Mission
+                    </h3>
+                    <p className="text-gray-400 leading-relaxed">
+                      {companyProfile.mission}
+                    </p>
+                  </div>
+                </div>
+              </ScrollReveal>
+            </div>
+
+            {/* Core Values */}
+            <ScrollReveal>
+              <div className="text-center mb-12">
+                <h3 className="text-2xl md:text-3xl font-semibold text-white mb-8">
+                  Core Values
+                </h3>
+                <div className="flex flex-wrap justify-center gap-4">
+                  {companyProfile.values.map((value, index) => (
+                    <motion.div
+                      key={index}
+                      className="bg-kawachi-primary/10 backdrop-blur border border-kawachi-primary/30 rounded-xl px-6 py-3 text-kawachi-primary font-semibold hover:bg-kawachi-primary/20 transition-colors"
+                      whileHover={{ scale: 1.05 }}
+                    >
+                      {value}
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* Key Personnel */}
+            <ScrollReveal>
+              <div className="mb-12">
+                <h3 className="text-2xl md:text-3xl font-semibold text-white text-center mb-8">
+                  Leadership Team
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {keyPersonnel.map((person, index) => (
+                    <motion.div
+                      key={index}
+                      className="bg-kawachi-dark/50 backdrop-blur-intense border border-kawachi-primary/20 rounded-2xl p-6 text-center hover:border-kawachi-primary/40 hover:shadow-glow transition-all duration-300"
+                      whileHover={{ y: -5 }}
+                    >
+                      <img
+                        src={person.image}
+                        alt={person.name}
+                        className="w-20 h-20 mx-auto rounded-full object-cover border-2 border-kawachi-primary/30 mb-4"
+                      />
+                      <h4 className="text-lg font-semibold text-white mb-2">
+                        {person.name}
+                      </h4>
+                      <p className="text-kawachi-primary text-sm mb-2">
+                        {person.role}
+                      </p>
+                      <p className="text-gray-400 text-xs mb-1">
+                        {person.qualification}
+                      </p>
+                      <p className="text-gray-500 text-xs">
+                        {person.experience}
+                      </p>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* Certifications */}
+            <ScrollReveal>
+              <div className="mb-12">
+                <h3 className="text-2xl md:text-3xl font-semibold text-white text-center mb-8">
+                  Certifications & Registrations
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {certifications.map((cert, index) => (
+                    <motion.div
+                      key={index}
+                      className="bg-kawachi-dark/30 backdrop-blur border border-kawachi-primary/20 rounded-xl p-4 text-center hover:border-kawachi-primary/40 transition-colors"
+                      whileHover={{ scale: 1.02 }}
+                    >
+                      <div className="text-kawachi-primary text-2xl mb-2">
+                        🏆
+                      </div>
+                      <p className="text-white text-sm font-medium">{cert}</p>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* Action Buttons */}
             <ScrollReveal delay={0.3}>
               <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
                 <MagneticButton
                   onClick={() => setIsPDFModalOpen(true)}
                   variant="primary"
                 >
-                  Company Profile
+                  View Full Profile
                 </MagneticButton>
                 <MagneticButton href="#contact" variant="secondary">
                   Get In Touch
                 </MagneticButton>
                 <MagneticButton
-                  href="https://adityabhardwaj1234.github.io/KawachiWeb/Kawachi%20Infratech%20private%20limited_Profile1.1.pdf"
+                  href="/Kawachi Infratech private limited_Profile1.1.pdf"
                   variant="secondary"
                 >
                   Download PDF
                 </MagneticButton>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+
+        {/* Sponsors & Partners Section */}
+        <section className="py-16 md:py-24 bg-gradient-to-r from-kawachi-darker to-kawachi-dark relative">
+          <div className="max-w-7xl mx-auto px-4 md:px-6">
+            <ScrollReveal>
+              <div className="text-center mb-12 md:mb-16">
+                <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-kawachi-primary to-kawachi-accent bg-clip-text text-transparent mb-4 md:mb-6">
+                  Our Partners & Sponsors
+                </h2>
+                <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
+                  Trusted partnerships with government agencies and leading
+                  organizations driving India's infrastructure development
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <StaggeredReveal className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+              {sponsors.map((sponsor, index) => (
+                <StaggerItem key={index}>
+                  <motion.div
+                    className="bg-kawachi-dark/40 backdrop-blur-intense border border-kawachi-primary/20 rounded-2xl overflow-hidden h-full transition-all duration-300 hover:border-kawachi-primary/40 hover:shadow-glow group"
+                    whileHover={{ y: -8, scale: 1.02 }}
+                    data-magnetic
+                  >
+                    <div className="relative h-32 md:h-40 overflow-hidden">
+                      <motion.img
+                        src={sponsor.logo}
+                        alt={sponsor.name}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-kawachi-dark via-transparent to-transparent" />
+                      <div className="absolute top-3 right-3">
+                        <span className="px-2 py-1 bg-kawachi-primary/20 text-kawachi-primary text-xs font-semibold rounded-full border border-kawachi-primary/30">
+                          {sponsor.category}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="p-4 md:p-6">
+                      <h3 className="text-base md:text-lg font-semibold text-white mb-2 group-hover:text-kawachi-primary transition-colors">
+                        {sponsor.name}
+                      </h3>
+                      <p className="text-gray-400 text-xs md:text-sm leading-relaxed">
+                        {sponsor.description}
+                      </p>
+                    </div>
+                  </motion.div>
+                </StaggerItem>
+              ))}
+            </StaggeredReveal>
+
+            {/* Partnership Benefits */}
+            <ScrollReveal>
+              <div className="mt-12 md:mt-16 bg-kawachi-dark/30 backdrop-blur border border-kawachi-primary/20 rounded-2xl p-6 md:p-8">
+                <h3 className="text-xl md:text-2xl font-semibold text-white text-center mb-6">
+                  Partnership Benefits
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="text-center">
+                    <div className="text-3xl mb-3">🤝</div>
+                    <h4 className="text-white font-semibold mb-2">
+                      Strategic Collaboration
+                    </h4>
+                    <p className="text-gray-400 text-sm">
+                      Joint planning and execution of large-scale infrastructure
+                      projects
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl mb-3">💼</div>
+                    <h4 className="text-white font-semibold mb-2">
+                      Resource Sharing
+                    </h4>
+                    <p className="text-gray-400 text-sm">
+                      Access to advanced technology, expertise, and financial
+                      resources
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl mb-3">🎯</div>
+                    <h4 className="text-white font-semibold mb-2">
+                      Mutual Growth
+                    </h4>
+                    <p className="text-gray-400 text-sm">
+                      Sustainable development and shared success in
+                      infrastructure advancement
+                    </p>
+                  </div>
+                </div>
               </div>
             </ScrollReveal>
           </div>
