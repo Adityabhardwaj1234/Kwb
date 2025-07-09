@@ -1339,7 +1339,7 @@ export default function HomePage() {
             </div>
             <div className="flex-1">
               <iframe
-                src="/Kawachi%20Infratech%20private%20limited_Profile1.1.pdf"
+                src="/Kawachi Infratech private limited_Profile1.1.pdf"
                 className="w-full h-full border-none"
                 title="Kawachi Infratech Company Profile"
                 onError={() => {
