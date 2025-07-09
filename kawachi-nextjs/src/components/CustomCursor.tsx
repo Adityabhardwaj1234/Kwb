@@ -47,12 +47,16 @@ export default function CustomCursor({ isMobile }: CustomCursorProps) {
   useEffect(() => {
     // Enhanced mobile detection
     const isTouchDevice =
-      "ontouchstart" in window || navigator.maxTouchPoints > 0;
-    const isSmallScreen = window.innerWidth <= 768;
+      typeof window !== "undefined" &&
+      ("ontouchstart" in window || navigator.maxTouchPoints > 0);
+    const isSmallScreen =
+      typeof window !== "undefined" && window.innerWidth <= 768;
 
     if (isMobile || isTouchDevice || isSmallScreen) {
       // Ensure cursor is visible on mobile devices
-      document.body.style.cursor = "auto";
+      if (typeof document !== "undefined") {
+        document.body.style.cursor = "auto";
+      }
       return;
     }
 
