@@ -158,6 +158,182 @@ export default function HomePage() {
         "Smart grid infrastructure for solar and wind energy integration.",
       technologies: ["Smart Grid", "Energy Storage", "Grid Automation"],
     },
+    {
+      title: "Bengaluru International Airport Terminal 3",
+      category: "Airport Infrastructure",
+      location: "Bengaluru, Karnataka",
+      value: "₹1800 Cr",
+      duration: "54 months",
+      status: "In Progress",
+      image:
+        "https://images.pexels.com/photos/32889240/pexels-photo-32889240.jpeg",
+      description:
+        "Modern airport terminal with capacity for 50 million passengers annually.",
+      technologies: [
+        "Smart Terminal",
+        "Automated Systems",
+        "Sustainable Design",
+      ],
+    },
+    {
+      title: "Mumbai Coastal Road Project",
+      category: "Coastal Infrastructure",
+      location: "Mumbai, Maharashtra",
+      value: "₹2400 Cr",
+      duration: "66 months",
+      status: "Completed",
+      image: "https://images.pexels.com/photos/681347/pexels-photo-681347.jpeg",
+      description:
+        "8-lane coastal expressway connecting South Mumbai to Western suburbs.",
+      technologies: [
+        "Coastal Engineering",
+        "Marine Construction",
+        "Environmental Protection",
+      ],
+    },
+    {
+      title: "Noida-Greater Noida Metro Link",
+      category: "Metro Infrastructure",
+      location: "Uttar Pradesh",
+      value: "₹1350 Cr",
+      duration: "45 months",
+      status: "Completed",
+      image: "https://images.pexels.com/photos/681347/pexels-photo-681347.jpeg",
+      description:
+        "29.7 km metro line connecting Noida to Greater Noida with 21 stations.",
+      technologies: [
+        "Elevated Construction",
+        "Automated Train Control",
+        "Modern Stations",
+      ],
+    },
+    {
+      title: "Gandhinagar Smart Water Management",
+      category: "Smart Infrastructure",
+      location: "Gandhinagar, Gujarat",
+      value: "₹780 Cr",
+      duration: "36 months",
+      status: "In Progress",
+      image:
+        "https://images.pexels.com/photos/1259924/pexels-photo-1259924.jpeg",
+      description: "IoT-enabled water distribution system for the entire city.",
+      technologies: [
+        "IoT Sensors",
+        "Smart Meters",
+        "Data Analytics",
+        "Mobile Apps",
+      ],
+    },
+    {
+      title: "Chandigarh Solar Power Plant",
+      category: "Renewable Energy",
+      location: "Chandigarh",
+      value: "₹420 Cr",
+      duration: "24 months",
+      status: "Completed",
+      image:
+        "https://images.pexels.com/photos/8488029/pexels-photo-8488029.jpeg",
+      description: "100 MW solar power plant with battery storage system.",
+      technologies: [
+        "Solar PV",
+        "Battery Storage",
+        "Grid Integration",
+        "Monitoring Systems",
+      ],
+    },
+    {
+      title: "Kochi Metro Rail Extension",
+      category: "Urban Transport",
+      location: "Kochi, Kerala",
+      value: "₹1100 Cr",
+      duration: "48 months",
+      status: "In Progress",
+      image: "https://images.pexels.com/photos/681347/pexels-photo-681347.jpeg",
+      description:
+        "Extension of Kochi Metro to connect airport and major IT hubs.",
+      technologies: ["Metro Systems", "Elevated Tracks", "Smart Ticketing"],
+    },
+    {
+      title: "Jaipur Convention Center Complex",
+      category: "Commercial Infrastructure",
+      location: "Jaipur, Rajasthan",
+      value: "₹890 Cr",
+      duration: "42 months",
+      status: "Completed",
+      image:
+        "https://images.pexels.com/photos/11505610/pexels-photo-11505610.jpeg",
+      description:
+        "World-class convention center with hotel and exhibition facilities.",
+      technologies: [
+        "Modern Architecture",
+        "Smart Building",
+        "Conference Technology",
+      ],
+    },
+    {
+      title: "Bhubaneswar Smart Stadium",
+      category: "Sports Infrastructure",
+      location: "Bhubaneswar, Odisha",
+      value: "₹650 Cr",
+      duration: "30 months",
+      status: "Completed",
+      image:
+        "https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg",
+      description:
+        "Multi-purpose stadium with 60,000 capacity and modern amenities.",
+      technologies: [
+        "Smart Lighting",
+        "Digital Scoreboards",
+        "Retractable Roof",
+      ],
+    },
+    {
+      title: "Hyderabad IT Corridor Phase 2",
+      category: "IT Infrastructure",
+      location: "Hyderabad, Telangana",
+      value: "₹1600 Cr",
+      duration: "60 months",
+      status: "In Progress",
+      image:
+        "https://images.pexels.com/photos/11505610/pexels-photo-11505610.jpeg",
+      description:
+        "Expansion of HITEC City with modern office complexes and infrastructure.",
+      technologies: ["Fiber Optic", "Smart Buildings", "Green Technology"],
+    },
+    {
+      title: "Lucknow Waste Management Plant",
+      category: "Environmental Infrastructure",
+      location: "Lucknow, Uttar Pradesh",
+      value: "₹540 Cr",
+      duration: "36 months",
+      status: "In Progress",
+      image:
+        "https://images.pexels.com/photos/1259924/pexels-photo-1259924.jpeg",
+      description:
+        "Advanced waste-to-energy plant processing 2000 tons of waste daily.",
+      technologies: [
+        "Waste-to-Energy",
+        "Emission Control",
+        "Automated Sorting",
+      ],
+    },
+    {
+      title: "Agra Tourism Infrastructure Upgrade",
+      category: "Tourism Infrastructure",
+      location: "Agra, Uttar Pradesh",
+      value: "₹720 Cr",
+      duration: "40 months",
+      status: "Completed",
+      image:
+        "https://images.pexels.com/photos/32889240/pexels-photo-32889240.jpeg",
+      description:
+        "Comprehensive infrastructure upgrade around Taj Mahal including roads and facilities.",
+      technologies: [
+        "Heritage Conservation",
+        "Smart Tourism",
+        "Sustainable Development",
+      ],
+    },
   ];
 
   const newsItems = [
