@@ -686,6 +686,106 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* News Section */}
+        <section id="news" className="py-16 md:py-24 relative">
+          <div className="max-w-7xl mx-auto px-4 md:px-6">
+            <ScrollReveal>
+              <div className="text-center mb-12 md:mb-16">
+                <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-kawachi-primary to-kawachi-accent bg-clip-text text-transparent mb-4 md:mb-6">
+                  Latest News & Updates
+                </h2>
+                <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
+                  Stay updated with our latest projects, achievements, and
+                  industry developments
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <StaggeredReveal className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+              {newsItems.map((news, index) => (
+                <StaggerItem key={index}>
+                  <motion.article
+                    className="bg-kawachi-dark/50 backdrop-blur-intense border border-kawachi-primary/20 rounded-2xl overflow-hidden h-full transition-all duration-300 hover:border-kawachi-primary/40 hover:shadow-glow group"
+                    whileHover={{ y: -5 }}
+                  >
+                    <div className="relative h-48 overflow-hidden">
+                      <img
+                        src={news.image}
+                        alt={news.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-kawachi-dark via-transparent to-transparent" />
+                      <div className="absolute top-4 right-4">
+                        <span className="px-3 py-1 bg-kawachi-secondary/20 text-kawachi-secondary text-xs font-semibold rounded-full border border-kawachi-secondary/30">
+                          {news.category}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="p-6">
+                      <div className="flex items-center gap-2 mb-3">
+                        <span className="text-kawachi-primary text-sm">📅</span>
+                        <time className="text-gray-500 text-sm">
+                          {news.date}
+                        </time>
+                      </div>
+
+                      <h3 className="text-lg font-semibold text-white mb-3 leading-tight group-hover:text-kawachi-primary transition-colors">
+                        {news.title}
+                      </h3>
+
+                      <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                        {news.excerpt}
+                      </p>
+
+                      <div className="flex flex-wrap gap-2">
+                        {news.tags.map((tag, tagIndex) => (
+                          <span
+                            key={tagIndex}
+                            className="px-2 py-1 bg-kawachi-primary/10 text-kawachi-primary text-xs rounded-md border border-kawachi-primary/20"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+
+                      <motion.button
+                        className="mt-4 text-kawachi-accent text-sm font-medium hover:text-kawachi-primary transition-colors inline-flex items-center gap-1"
+                        whileHover={{ x: 5 }}
+                      >
+                        Read More →
+                      </motion.button>
+                    </div>
+                  </motion.article>
+                </StaggerItem>
+              ))}
+            </StaggeredReveal>
+
+            {/* Newsletter Signup */}
+            <ScrollReveal>
+              <div className="mt-16 bg-kawachi-dark/30 backdrop-blur border border-kawachi-primary/20 rounded-2xl p-8 text-center">
+                <h3 className="text-2xl md:text-3xl font-semibold text-white mb-4">
+                  Stay Updated
+                </h3>
+                <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
+                  Subscribe to our newsletter for the latest project updates,
+                  industry insights, and company news.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                  <input
+                    type="email"
+                    placeholder="Enter your email address"
+                    className="flex-1 px-4 py-3 bg-kawachi-dark/50 border border-kawachi-primary/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-kawachi-primary focus:shadow-glow transition-all duration-300"
+                  />
+                  <MagneticButton variant="primary" className="px-6">
+                    Subscribe
+                  </MagneticButton>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+
         {/* Contact Section */}
         <section id="contact" className="py-16 md:py-24 relative">
           <div className="max-w-6xl mx-auto px-4 md:px-6">
