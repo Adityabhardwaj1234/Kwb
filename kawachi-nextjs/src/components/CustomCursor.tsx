@@ -45,7 +45,16 @@ export default function CustomCursor({ isMobile }: CustomCursorProps) {
   const handleMouseLeave = useCallback(() => setIsVisible(false), []);
 
   useEffect(() => {
-    if (isMobile) return;
+    // Enhanced mobile detection
+    const isTouchDevice =
+      "ontouchstart" in window || navigator.maxTouchPoints > 0;
+    const isSmallScreen = window.innerWidth <= 768;
+
+    if (isMobile || isTouchDevice || isSmallScreen) {
+      // Ensure cursor is visible on mobile devices
+      document.body.style.cursor = "auto";
+      return;
+    }
 
     // Use passive listeners for better performance
     const options = { passive: true };
