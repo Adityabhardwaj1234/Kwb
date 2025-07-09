@@ -11,11 +11,11 @@ import ScrollReveal, {
   StaggerItem,
 } from "@/components/ScrollReveal";
 
-// Dynamic imports for performance
-const AlienPlanet = dynamic(() => import("@/components/AlienPlanet"), {
-  ssr: false,
-  loading: () => <div className="fixed inset-0 -z-10 bg-black" />,
-});
+// Temporarily disabled AlienPlanet due to React Three Fiber issues
+// const AlienPlanet = dynamic(() => import("@/components/AlienPlanet"), {
+//   ssr: false,
+//   loading: () => <div className="fixed inset-0 -z-10 bg-black" />,
+// });
 
 export default function HomePage() {
   const [isMobile, setIsMobile] = useState(false);
@@ -110,7 +110,11 @@ export default function HomePage() {
   return (
     <>
       <CustomCursor isMobile={isMobile} />
-      <AlienPlanet isMobile={isMobile} />
+      {/* Animated background instead of AlienPlanet */}
+      <div className="fixed inset-0 -z-10">
+        <div className="absolute inset-0 bg-gradient-to-br from-kawachi-space via-kawachi-darker to-kawachi-dark" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(0,255,255,0.1)_0%,_transparent_50%)]" />
+      </div>
 
       <Layout>
         {/* Hero Section */}
