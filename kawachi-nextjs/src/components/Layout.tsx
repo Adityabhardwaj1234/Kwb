@@ -24,11 +24,10 @@ export default function Layout({ children }: LayoutProps) {
   const navItems = [
     { label: "Home", href: "#home" },
     { label: "Services", href: "#services" },
-    { label: "Projects", href: "#projects" },
-    { label: "Capabilities", href: "#capabilities" },
+    { label: "Portfolio", href: "#portfolio" },
     { label: "About", href: "#about" },
-    { label: "Portfolio", href: "#" },
-    { label: "News", href: "#" },
+    { label: "Sponsors", href: "#sponsors" },
+    { label: "News", href: "#news" },
   ];
 
   return (
@@ -66,7 +65,7 @@ export default function Layout({ children }: LayoutProps) {
                 <motion.a
                   key={item.label}
                   href={item.href}
-                  className="text-gray-300 hover:text-kawachi-primary transition-colors duration-300 relative group"
+                  className="text-gray-300 hover:text-kawachi-primary transition-colors duration-300 relative group whitespace-nowrap"
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
@@ -132,29 +131,32 @@ export default function Layout({ children }: LayoutProps) {
               transition={{ duration: 0.3 }}
               className="lg:hidden bg-black/98 backdrop-blur-intense border-t border-kawachi-primary/20"
             >
-              <div className="px-6 py-8 space-y-6">
-                {navItems.map((item, index) => (
-                  <motion.a
-                    key={item.label}
-                    href={item.href}
-                    className="block text-xl text-gray-300 hover:text-kawachi-primary transition-colors duration-300"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {item.label}
-                  </motion.a>
-                ))}
+              <div className="px-4 py-6">
+                {/* Horizontal scrollable navigation for mobile */}
+                <div className="flex gap-4 overflow-x-auto scrollbar-hide pb-4 -mx-2 px-2">
+                  {navItems.map((item, index) => (
+                    <motion.a
+                      key={item.label}
+                      href={item.href}
+                      className="flex-shrink-0 bg-kawachi-dark/60 backdrop-blur border border-kawachi-primary/20 rounded-xl px-4 py-3 text-sm text-gray-300 hover:text-kawachi-primary hover:border-kawachi-primary/40 transition-all duration-300 whitespace-nowrap"
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {item.label}
+                    </motion.a>
+                  ))}
+                </div>
 
-                <div className="pt-4">
+                <div className="pt-4 mt-4 border-t border-kawachi-primary/20">
                   <MagneticButton
                     href="#contact"
                     variant="primary"
-                    className="w-full justify-center"
+                    className="w-full justify-center text-sm py-3"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    Contact
+                    Get In Touch
                   </MagneticButton>
                 </div>
               </div>
