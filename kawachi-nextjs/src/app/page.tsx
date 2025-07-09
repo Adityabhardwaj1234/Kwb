@@ -64,6 +64,166 @@ export default function HomePage() {
     },
   ];
 
+  const portfolioProjects = [
+    {
+      title: "Delhi Metro Extension Phase 4",
+      category: "Transportation Infrastructure",
+      location: "New Delhi",
+      value: "₹850 Cr",
+      duration: "48 months",
+      status: "Completed",
+      image: "https://images.pexels.com/photos/681347/pexels-photo-681347.jpeg",
+      description:
+        "Underground metro line extension with 15 stations covering 28.5 km route.",
+      technologies: [
+        "TBM Construction",
+        "Advanced Signaling",
+        "Smart Stations",
+      ],
+    },
+    {
+      title: "Smart City Gurgaon Infrastructure",
+      category: "Urban Development",
+      location: "Gurgaon, Haryana",
+      value: "₹1200 Cr",
+      duration: "60 months",
+      status: "In Progress",
+      image:
+        "https://images.pexels.com/photos/11505610/pexels-photo-11505610.jpeg",
+      description:
+        "Comprehensive smart city development including roads, utilities, and digital infrastructure.",
+      technologies: ["IoT Integration", "Smart Grid", "Sustainable Design"],
+    },
+    {
+      title: "Yamuna Water Treatment Plant",
+      category: "Water Management",
+      location: "Delhi",
+      value: "₹450 Cr",
+      duration: "36 months",
+      status: "Completed",
+      image:
+        "https://images.pexels.com/photos/1259924/pexels-photo-1259924.jpeg",
+      description:
+        "State-of-the-art water treatment facility serving 1.5 million residents.",
+      technologies: [
+        "Advanced Filtration",
+        "Automated Systems",
+        "Environmental Protection",
+      ],
+    },
+    {
+      title: "National Highway 48 Expansion",
+      category: "Highway Construction",
+      location: "Delhi-Mumbai Corridor",
+      value: "₹2200 Cr",
+      duration: "72 months",
+      status: "In Progress",
+      image:
+        "https://images.pexels.com/photos/32889240/pexels-photo-32889240.jpeg",
+      description:
+        "6-lane highway expansion with smart traffic management systems.",
+      technologies: [
+        "Smart Traffic Systems",
+        "Weather Monitoring",
+        "Automated Toll",
+      ],
+    },
+    {
+      title: "AIIMS Expansion Project",
+      category: "Healthcare Infrastructure",
+      location: "New Delhi",
+      value: "₹680 Cr",
+      duration: "42 months",
+      status: "Completed",
+      image:
+        "https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg",
+      description:
+        "Modern healthcare facility with 500 beds and advanced medical equipment.",
+      technologies: [
+        "Green Building",
+        "Advanced HVAC",
+        "Smart Building Systems",
+      ],
+    },
+    {
+      title: "Renewable Energy Grid Integration",
+      category: "Power Infrastructure",
+      location: "Rajasthan",
+      value: "₹950 Cr",
+      duration: "30 months",
+      status: "In Progress",
+      image:
+        "https://images.pexels.com/photos/8488029/pexels-photo-8488029.jpeg",
+      description:
+        "Smart grid infrastructure for solar and wind energy integration.",
+      technologies: ["Smart Grid", "Energy Storage", "Grid Automation"],
+    },
+  ];
+
+  const newsItems = [
+    {
+      title: "Kawachi Infratech Wins ₹1500 Cr Smart City Project in Pune",
+      date: "December 15, 2024",
+      category: "Project Award",
+      excerpt:
+        "Our company has been selected as the primary contractor for Pune's comprehensive smart city infrastructure development, marking our largest single project to date.",
+      image:
+        "https://images.pexels.com/photos/11505610/pexels-photo-11505610.jpeg",
+      tags: ["Smart City", "Urban Development", "Technology Integration"],
+    },
+    {
+      title: "Completion of Delhi Metro Phase 4 Extension Ahead of Schedule",
+      date: "November 28, 2024",
+      category: "Project Completion",
+      excerpt:
+        "Successfully completed the 28.5 km metro extension 6 months ahead of schedule, demonstrating our commitment to timely delivery and quality execution.",
+      image: "https://images.pexels.com/photos/681347/pexels-photo-681347.jpeg",
+      tags: ["Metro Construction", "Public Transport", "Infrastructure"],
+    },
+    {
+      title:
+        "Kawachi Infratech Adopts Advanced BIM Technology for All Projects",
+      date: "November 10, 2024",
+      category: "Technology",
+      excerpt:
+        "Implementation of Building Information Modeling across all projects enhances precision, reduces costs, and improves project delivery timelines.",
+      image:
+        "https://images.pexels.com/photos/6615237/pexels-photo-6615237.jpeg",
+      tags: ["BIM", "Technology", "Innovation", "Digital Transformation"],
+    },
+    {
+      title: "Partnership with IIT Delhi for Sustainable Construction Research",
+      date: "October 22, 2024",
+      category: "Partnership",
+      excerpt:
+        "Collaboration with IIT Delhi's Civil Engineering department to develop eco-friendly construction materials and sustainable building practices.",
+      image:
+        "https://images.pexels.com/photos/32866728/pexels-photo-32866728.jpeg",
+      tags: ["Research", "Sustainability", "Innovation", "Academia"],
+    },
+    {
+      title: "ISO 45001:2018 Certification for Occupational Health & Safety",
+      date: "October 5, 2024",
+      category: "Certification",
+      excerpt:
+        "Achieved ISO 45001:2018 certification, reinforcing our commitment to maintaining the highest standards of workplace safety across all projects.",
+      image:
+        "https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg",
+      tags: ["Safety", "Certification", "Standards", "Workplace"],
+    },
+    {
+      title:
+        "Green Building Initiative: 50% Projects to be LEED Certified by 2025",
+      date: "September 18, 2024",
+      category: "Sustainability",
+      excerpt:
+        "Announcing our commitment to environmental sustainability with a target of 50% LEED certified projects by 2025, supporting India's green building mission.",
+      image:
+        "https://images.pexels.com/photos/1259924/pexels-photo-1259924.jpeg",
+      tags: ["LEED", "Green Building", "Sustainability", "Environment"],
+    },
+  ];
+
   const sponsors = [
     {
       name: "Ministry of Road Transport & Highways",
