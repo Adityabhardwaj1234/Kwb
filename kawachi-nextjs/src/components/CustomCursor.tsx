@@ -12,6 +12,7 @@ export default function CustomCursor({ isMobile }: CustomCursorProps) {
   const [isHovering, setIsHovering] = useState(false);
   const [mounted, setMounted] = useState(false);
 
+  // IMPORTANT: All hooks must be called before any early returns
   // Use Framer Motion values for smooth animation
   const cursorX = useMotionValue(0);
   const cursorY = useMotionValue(0);
@@ -19,6 +20,10 @@ export default function CustomCursor({ isMobile }: CustomCursorProps) {
   const springConfig = { damping: 25, stiffness: 400, mass: 0.1 };
   const cursorXSpring = useSpring(cursorX, springConfig);
   const cursorYSpring = useSpring(cursorY, springConfig);
+
+  // Trail springs with different config
+  const trailXSpring = useSpring(cursorX, { damping: 30, stiffness: 200 });
+  const trailYSpring = useSpring(cursorY, { damping: 30, stiffness: 200 });
 
   const updateCursorPosition = useCallback(
     (e: MouseEvent) => {
@@ -138,8 +143,8 @@ export default function CustomCursor({ isMobile }: CustomCursorProps) {
           isVisible ? "opacity-60" : "opacity-0"
         }`}
         style={{
-          x: useSpring(cursorX, { damping: 30, stiffness: 200 }),
-          y: useSpring(cursorY, { damping: 30, stiffness: 200 }),
+          x: trailXSpring,
+          y: trailYSpring,
           translateX: "-50%",
           translateY: "-50%",
         }}
