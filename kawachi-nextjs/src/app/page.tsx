@@ -1087,7 +1087,7 @@ export default function HomePage() {
                   Get In Touch
                 </MagneticButton>
                 <MagneticButton
-                  href="/Kawachi Infratech private limited_Profile1.1.pdf"
+                  href="/Kawachi%20Infratech%20private%20limited_Profile1.1.pdf"
                   variant="secondary"
                 >
                   Download PDF
