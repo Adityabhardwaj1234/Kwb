@@ -24,11 +24,10 @@ export default function Layout({ children }: LayoutProps) {
   const navItems = [
     { label: "Home", href: "#home" },
     { label: "Services", href: "#services" },
-    { label: "Projects", href: "#projects" },
-    { label: "Capabilities", href: "#capabilities" },
+    { label: "Portfolio", href: "#portfolio" },
     { label: "About", href: "#about" },
-    { label: "Portfolio", href: "#" },
-    { label: "News", href: "#" },
+    { label: "Sponsors", href: "#sponsors" },
+    { label: "News", href: "#news" },
   ];
 
   return (
